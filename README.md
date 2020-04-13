@@ -64,3 +64,4 @@ Simply press start and then press stop when you want to stop recording the signa
 The waveform generator is given this signal
 ![waveformSignal](https://raw.githubusercontent.com/esh64/Maiguilles/master/TutorialPictures/WhatsApp%20Image%202020-04-13%20at%2011.16.21.jpeg)
 And as we can see, the signal obtained by the arduino is the same as the waveform generator created.
+![waveFormObtained](https://github.com/esh64/Maiguilles/blob/master/TutorialPictures/InputSignal.png)
