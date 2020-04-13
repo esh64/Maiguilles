@@ -6,7 +6,7 @@ Maiguilles is an arduino oriented software in wich we are able to use an cheap 8
   * Python libs:
     * [PyQt4](https://pypi.org/project/PyQt4/)
     * [python-serial](https://pyserial.readthedocs.io/en/latest/shortintro.html)
-  * [Arduino IDE] (https://www.arduino.cc/en/main/software)
+  * [Arduino IDE](https://www.arduino.cc/en/main/software)
   * [Arduino Makefiles](https://github.com/sudar/Arduino-Makefile)
  
 * Windows: *Temporary unavaible.*
