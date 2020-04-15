@@ -24,11 +24,10 @@ def checkArduinoConected(platform):
                 return i
         return ''
     if platform=="Windows":
-        serialPorts=os.popen("wmic path Win32_SerialPort").read()
-        if "Arduino" in serialPorts:
-            arduinoFirstPosition=serialPorts.index("Arduino")
-            comPortUsedForArduino=serialPorts[arduinoFirstPosition:].index("COM")
-            return serialPorts[arduinoFirstPosition:][comPortUsedForArduino:comPortUsedForArduino+4]#len of COM plus the number of the COM port
+        serialPorts=os.popen("mode").read()
+        if "COM" in serialPorts:
+            comFirstPosition=serialPorts.index("COM")
+            return serialPorts[comFirstPosition:comFirstPosition+4]#len of COM plus the number of the COM port
         return ''
     else:
         print("Not working with mac yet")
