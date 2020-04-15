@@ -153,14 +153,14 @@ class mainFrame(QtGui.QFrame):
                 print(os.getcwd())
                 self.mainWindow.statusLabel.setText("Compiling")
                 self.mainWindow.app.processEvents()
-                print(arduinoLocation+"\\arduino_debug --verify --board arduino:avr:"+board+" --verbose temporary.ino")
-                if os.system(arduinoLocation+"\\arduino_debug --verify --board arduino:avr:"+board+" --verbose temporary.ino")!=0:#TODO add CPU e architecture options
+                print("\""+arduinoLocation+"\\arduino_debug.exe\" --verify --board arduino:avr:"+board+" --verbose temporary.ino")
+                if os.system("\""+arduinoLocation+"\\arduino_debug.exe\" --verify --board arduino:avr:"+board+" --verbose temporary.ino")!=0:#TODO add CPU e architecture options
                     QtGui.QMessageBox.question(self, 'Alert', "Error at compiling", QtGui.QMessageBox.Ok)
                     return 3
                 self.mainWindow.statusLabel.setText("Uploading")
                 self.mainWindow.app.processEvents()
-                print(arduinoLocation+"\\arduino_debug --upload --board arduino:avr:"+board+" --port"+self.arduinoPort+" --verbose temporary.ino")
-                if os.system(arduinoLocation+"\\arduino_debug --upload --board arduino:avr:"+board+" --port "+self.arduinoPort+" --verbose temporary.ino")!=0:
+                print("\""+arduinoLocation+"\\arduino_debug.exe\" --upload --board arduino:avr:"+board+" --port"+self.arduinoPort+" --verbose temporary.ino")
+                if os.system("\""+arduinoLocation+"\\arduino_debug.exe\" --upload --board arduino:avr:"+board+" --port "+self.arduinoPort+" --verbose temporary.ino")!=0:
                     QtGui.QMessageBox.question(self, 'Alert', "Error at uploading", QtGui.QMessageBox.Ok)
                     return 4
                 self.arduinoSerial=serial.Serial(self.arduinoPort, int(self.baudRateComboBox.currentText()))
