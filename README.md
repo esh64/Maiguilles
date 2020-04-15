@@ -1,5 +1,5 @@
 # Maiguilles
-Maiguilles is an arduino-oriented software, in which we can use a cheap 8-bit microcontroller as an oscilloscope or function generator. For now, it is only possible to work with digital signal. We hope that, in the near future, we will also be able to work with analog signal. It was written in python 2.7, powered by qt4, so it could run on any operating system that supports qt4. Development has already reached support for Linux and Windows, but through recent Windows updates that have made Windows support temporarily unavailable.
+Maiguilles is an arduino-oriented software, in which we can use a cheap 8-bit microcontroller as an oscilloscope or function generator. For now, it is only possible to work with digital signal. We hope that, in the near future, we will also be able to work with analog signal. It was written in python 2.7, powered by qt4, so it could run on any operating system that supports qt4. Development has already reached support for Linux and Windows.
 
 ## Installation
 * Linux: Its needs all the python files in the marster Directory and also requires some other depedencies:
@@ -9,12 +9,17 @@ Maiguilles is an arduino-oriented software, in which we can use a cheap 8-bit mi
   * [Arduino IDE](https://www.arduino.cc/en//software)
   * [Arduino Makefile](https://github.com/sudar/Arduino-Makefile)
  
-* Windows: *Temporary unavaible.*
+* Windows: Its needs all the python files in the marster Directory and also requires some other depedencies:
+  * Python libs:
+    * [PyQt4](https://pypi.org/project/PyQt4/)
+    * [python-serial](https://pyserial.readthedocs.io/en/latest/shortintro.html)
+  * [Arduino IDE](https://www.arduino.cc/en//software)
 
 ## How to use
 Just type ```python Maiguilles.py``` in the .py files folder or Execute the binary file. Note that you need python 2.7 to execute from the Maiguilles.py file.
 ### Conifgure Program
-On the first run, the config program screen will pop up asking the board are you using and the Arduino Makefile location. The arduino makefile location normally is located at /usr/share/arduino/ if installed trought package manager. Just point to where the .mk file is and press OK. ![configProgram](https://raw.githubusercontent.com/esh64/Maiguilles/master/TutorialPictures/configProgram.png)
+On the first run, the config program screen will pop up asking the board are you using and the Arduino Makefile location in Linux and Arduino IDE location in Windows. The arduino makefile location normally is located at /usr/share/arduino/ if installed trought package manager. Just point to where the .mk file is and press OK. ![configProgram](https://raw.githubusercontent.com/esh64/Maiguilles/master/TutorialPictures/configProgram.png)
+The Arduino IDE location is normaly located ate C:\Program Files (x86)\arduino. Just point to where arduino.exe and arduino_debug.exe are located.
 
 ### The main Screen
 * ![Main Screen](https://raw.githubusercontent.com/esh64/Maiguilles/master/TutorialPictures/PartsGuide.png) The main screen: This is the software main screen where we can found the following components:
@@ -65,3 +70,6 @@ The waveform generator is given this signal
 ![waveformSignal](https://raw.githubusercontent.com/esh64/Maiguilles/master/TutorialPictures/WhatsApp%20Image%202020-04-13%20at%2011.16.21.jpeg)
 And as we can see, the signal obtained by the arduino is the same as the waveform generator created.
 ![waveFormObtained](https://github.com/esh64/Maiguilles/blob/master/TutorialPictures/InputSignal.png)
+
+## Next Steps:
+We hope to add some new features to our software. Feature like using Arduino's analog pin to obtain analog signals and real time graph drawing. We're also looking to port the software for MAC OS Users.
